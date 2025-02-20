@@ -12,38 +12,61 @@
 // console.log(numberArray);
 // console.log(numberArray.toString());
 
-
 const customers = [
-    {
-        name: "Saman",
-        age: 52,
-        address: "Kegalle"
-    },
-    {
-        name: "Nimal",
-        age: 35,
-        address: "Rambukkana"
-    },
-    {
-        name: "Kamal",
-        age: 44,
-        address: "Mawenella"
-    }
-]
+  {
+    name: "Saman",
+    age: 52,
+    address: "Kegalle",
+  },
+  {
+    name: "Nimal",
+    age: 35,
+    address: "Rambukkana",
+  },
+  {
+    name: "Kamal",
+    age: 44,
+    address: "Mawenella",
+  },
+];
 
-function addCustomer(){
-    let name = document.getElementById("txtUserName").value;
-    let age = document.getElementById("txtAge").value;
-    let address = document.getElementById("txtAddress").value;
+function addCustomer() {
+  let name = document.getElementById("txtUserName").value;
+  let age = document.getElementById("txtAge").value;
+  let address = document.getElementById("txtAddress").value;
 
-    customers.push({
-        name,
-        age,
-        address
-    })
+  customers.push({
+    name,
+    age,
+    address,
+  });
 
-    console.log(customers);
+  console.log(customers);
+  alert("Customer added Successfully!");
+
+  showAllCustomers();
 }
 
 
+function showAllCustomers() {
+  let tblCustomers = document.getElementById("tblCustomers");
 
+  let tableBody = `<tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Address</th>
+                   </tr>`;
+
+  customers.forEach((data) => {
+    console.log(data);
+
+    tableBody += `<tr>
+                        <td>${data.name}</td>
+                        <td>${data.age}</td>
+                        <td>${data.address}</td>
+                      </tr>`;
+  });
+
+  tblCustomers.innerHTML = tableBody;
+  console.log(tableBody);
+}
