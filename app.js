@@ -43,8 +43,6 @@ function addCustomer() {
 
   console.log(customers);
   alert("Customer added Successfully!");
-
-  showAllCustomers();
 }
 
 
@@ -61,10 +59,10 @@ function showAllCustomers() {
     console.log(data);
 
     tableBody += `<tr>
-                        <td>${data.name}</td>
-                        <td>${data.age}</td>
-                        <td>${data.address}</td>
-                      </tr>`;
+                    <td>${data.name}</td>
+                    <td>${data.age}</td>
+                    <td>${data.address}</td>
+                  </tr>`;
   });
 
   tblCustomers.innerHTML = tableBody;
