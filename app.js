@@ -42,7 +42,8 @@ function addCustomer() {
   });
 
   console.log(customers);
-  alert("Customer added Successfully!");
+  showAllCustomers();
+  alert("Customer added Successfully!"); 
 }
 
 
