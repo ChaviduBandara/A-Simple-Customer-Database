@@ -1,20 +1,38 @@
-body{
+body {
     background: linear-gradient(135deg, #125dd7, #c2e9fb);
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-attachment: fixed; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
-.form{
+
+.form {
     background-color: white;
     padding: 50px;
     border-radius: 40px;
 }
+
 th,
-td{
+td {
     width: 33%;
     text-align: center;
 }
-th{
+
+th {
     font-size: larger;
 }
+
+.acme-regular {
+    font-family: "Acme", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 45px;
+    word-spacing: 10px;
+  }
+
+  h2 {
+    position: relative;
+    top: 13px; /* Adjust this value as needed */
+}
+
+  

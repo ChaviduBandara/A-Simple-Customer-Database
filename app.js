@@ -13,27 +13,36 @@
 // console.log(numberArray.toString());
 
 const customers = [
-  {
-    name: "Saman",
-    age: 52,
-    address: "Kegalle",
-  },
-  {
-    name: "Nimal",
-    age: 35,
-    address: "Rambukkana",
-  },
-  {
-    name: "Kamal",
-    age: 44,
-    address: "Mawenella",
-  },
+  // {
+  //   name: "Saman",
+  //   age: 52,
+  //   address: "Kegalle",
+  // },
+  // {
+  //   name: "Nimal",
+  //   age: 35,
+  //   address: "Rambukkana",
+  // },
+  // {
+  //   name: "Kamal",
+  //   age: 44,
+  //   address: "Mawenella",
+  // },
 ];
 
 function addCustomer() {
-  let name = document.getElementById("txtUserName").value;
-  let age = document.getElementById("txtAge").value;
-  let address = document.getElementById("txtAddress").value;
+  let nameInput = document.getElementById("txtUserName");
+  let ageInput = document.getElementById("txtAge");
+  let addressInput = document.getElementById("txtAddress");
+
+  let name = nameInput.value;
+  let age = ageInput.value;
+  let address = addressInput.value;
+
+  if (name === "" || age === "" || address === "") {
+    alert("Please fill in all fields!");
+    return;
+  }
 
   customers.push({
     name,
@@ -42,9 +51,15 @@ function addCustomer() {
   });
 
   console.log(customers);
+
   showAllCustomers();
   alert("Customer added Successfully!"); 
+
+  nameInput.value = "";
+  ageInput.value = "";
+  addressInput.value = "";
 }
+
 
 
 function showAllCustomers() {
